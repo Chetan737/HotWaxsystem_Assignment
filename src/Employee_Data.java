@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Employee_Data {
-    private static String File = "C:\\Users\\Chetan\\IdeaProjects\\Assi_3\\text1.txt";
+    private static String File = "C:\\Users\\Chetan\\IdeaProjects\\Problem_Statement_3\\text1.txt";
     private static Gson gson = new Gson();
 
     private static class Employee{
@@ -179,9 +179,7 @@ public class Employee_Data {
             {
                 case 1:insertRecord();break;
                 case 2:readFile();break;
-                //case 3:searchRecord();break;
-                //case 4:searchAll();break;
-                //case 5:updateRecord();break;
+
             }
         }while(choice!=6);
     }

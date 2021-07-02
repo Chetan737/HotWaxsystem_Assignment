@@ -19,7 +19,7 @@ public class SortingOnFile {
 
     public static void main(String[] args) throws Exception
     {
-        new SortingOnFile().sortElement("C:\\Users\\Chetan\\IdeaProjects\\Assi_3\\text1.txt",
-                "C:\\Users\\Chetan\\IdeaProjects\\Assi_3\\Sorted_text_file");
+        new SortingOnFile().sortElement("C:\\Users\\Chetan\\IdeaProjects\\Problem_Statement_3\\text1.txt",
+                "C:\\Users\\Chetan\\IdeaProjects\\Problem_Statement_3\\Sorted_text_file");
     }
 }
