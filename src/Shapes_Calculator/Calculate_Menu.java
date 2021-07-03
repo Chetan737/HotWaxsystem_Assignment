@@ -1,5 +1,10 @@
 package Shapes_Calculator;
+/*
+*To Calculate the Area and Perimeter of Circle ,Rectangle, Triangle, Square, Sphere, Cylinder etc
+*
 
+
+ */
 import java.util.Scanner;
 
 public class Calculate_Menu {
