@@ -1,29 +1,31 @@
-public class AccountOverdrawDemo implements Runnable{
-    private Account account;
-    //Withdraw w=new Withdraw();
+package AccountOpDemo;
 
-    public AccountOverdrawDemo(Account account) {
+import Model.Account;
+
+public class AccountOverdrawSafeDemo implements Runnable{
+    private Account account;
+
+    public AccountOverdrawSafeDemo(Account account) {
         this.account = account;
     }
 
     @Override
     public void run() {
         for(int i = 0 ; i < 4 ; i++) {
-
-            getWithdraw(300);
-            if(account.getBal() < 300) {
+            getWithdraw(400);
+            if(account.getBal() < 1000) {
                 System.out.println(" Insufficient Fund Exceed Limit : *****");
                 break;
             }
         }
     }
 
-    public void getWithdraw(int withdrawAmt) {
+    private  synchronized void  getWithdraw(int withdrawAmt) {
 
         if(account.getBal() >= withdrawAmt) {
-            System.out.println(Thread.currentThread().getName()+" "+withdrawAmt+"Rs.");
+
             try {
-                Thread.sleep(1000);
+                Thread.sleep(3000);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -36,19 +38,21 @@ public class AccountOverdrawDemo implements Runnable{
     }
 
     public static void main(String[] args) {
-        //Account acc=new Account();
+
         Account myAccount = new Account(Thread.currentThread().getName());
-        AccountOverdrawDemo objAOD = new AccountOverdrawDemo(myAccount);
 
+        AccountOverdrawSafeDemo demoAccountSafeOverdraw = new AccountOverdrawSafeDemo(myAccount);
+        System.out.print("*** Synchronization ***\n");
+        Thread t1 = new Thread(demoAccountSafeOverdraw);
+        t1.setName("Chetan");
 
-        System.out.print("*** Without Synchronization ***\n");
-        Thread t1 = new Thread(objAOD);
-        t1.setName("Chetan : ");
-        Thread t2 = new Thread(objAOD);
-        t2.setName("Yash : ");
+        Thread t2 = new Thread(demoAccountSafeOverdraw);
+        t2.setName("Yash");
 
-        //Starting Thread
         t1.start();
+
         t2.start();
+
+
     }
 }

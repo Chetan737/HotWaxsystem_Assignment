@@ -1,3 +1,5 @@
+package Model;
+
 public class Account {
     private String name; //username;
     private int balance; // account balance;
@@ -5,7 +7,7 @@ public class Account {
 
     public Account(String name)
     {
-        this.balance = 1000;
+        this.balance = 2000;
         this.name = name;
     }
 
