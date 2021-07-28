@@ -1,3 +1,5 @@
+package Model;
+
 import java.io.Serializable;
 
 public class Address implements Serializable {
@@ -52,7 +54,7 @@ public class Address implements Serializable {
 
     @Override
     public String toString() {
-        return "Address [City=" + city + ", State =" + State + ", pincode=" + pincode + ", Country="
+        return "Model.Address [City=" + city + ", State =" + State + ", pincode=" + pincode + ", Country="
                 + country + "]";
     }
 }

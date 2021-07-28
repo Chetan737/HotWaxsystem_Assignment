@@ -1,3 +1,8 @@
+
+
+import Model.Address;
+import Model.Student;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -6,7 +11,7 @@ import java.util.Scanner;
 public class SerializationTest {
     public static void main(String[] args) {
 
-        String fileName = "C:\\Users\\Chetan\\Desktop\\Ass_5\\output.ser";
+        String fileName = "C:\\Users\\Chetan\\Desktop\\Ass_5\\src\\SerializationTestFile\\output2.ser";
         serializeObject(fileName);
 
     }
@@ -15,7 +20,7 @@ public class SerializationTest {
         String city,country,state;
         int pincode;
 
-        //Getting User input for Address here :
+        //Getting User input for Model.Address here :
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter City here: ");
         city=sc.next();
@@ -26,8 +31,8 @@ public class SerializationTest {
         System.out.println("Enter Country here: ");
         country=sc.next();
 
-        //Getting user Input for Student here :
-        System.out.println("Enter Student Name : ");
+        //Getting user Input for Model.Student here :
+        System.out.println("Enter Model.Student Name : ");
         String n=sc.next();
         System.out.println("Enter Date of Birth : ");
         String dob=sc.next();
