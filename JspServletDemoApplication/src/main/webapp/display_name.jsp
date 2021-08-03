@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+// Changes in Display_names.jsp page
 <!DOCTYPE html>
 <html>
     <head>
