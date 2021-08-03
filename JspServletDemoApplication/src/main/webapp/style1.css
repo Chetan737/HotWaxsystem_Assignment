@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	background-color: brown;
+	color: white;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.button {
+	background-color: blueviolet;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: underline;
+	display: table-cell;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	padding: 6px 20px;
+	border-radius: 8px;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
